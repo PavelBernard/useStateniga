@@ -13,12 +13,12 @@ export const Counter = () => {
     return (
         <div style={{ backgroundImage: backgroundImage, backgroundSize: 'cover', height: '100vh' }}>
             <button onClick={handleToggle}>
-                {buttonsVisible ? 'Skrytí tlačítek' : 'Klikni na mě'}
+                {buttonsVisible ? 'Skrýt negra' : 'Ukaž negra'}
             </button>
 
             {buttonsVisible && (
                 <div>
-                    <p>Počet: {count}</p>
+                    <p style={{ color: 'white' }}>Počet: {count}</p>
                     <button onClick={() => setCount(prevCount => prevCount + 1)}>Přidat</button>
                     <button onClick={() => setCount(prevCount => prevCount - 1)}>Odebrat</button>
                     <button onClick={() => setCount(prevCount => prevCount = 0)}>Restart</button>
