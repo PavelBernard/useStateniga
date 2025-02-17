@@ -3,6 +3,15 @@ import { useEffect, useState } from 'react';
 export const FetchUsers = () => {
     const [users, setUsers] = useState([]);
 
+    function fetchData(){
+        fetch('https:--jsonplaceholder.typicode.com/users')
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+            setUsers(data);
+        })
+    }
+
     useEffect(() => {
         fetch('https://jsonplaceholder.typicode.com/users')
             .then(response => response.json())
