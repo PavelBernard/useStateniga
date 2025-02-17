@@ -5,8 +5,9 @@ export const AutoCounter = () => {
 
     useEffect(() => {
         const interval = setInterval(() => {
-            setCount((lastCount) => lastCount + 1 / 2);
+            setCount((lastCount) => lastCount + 1);
         }, 1000);
+        return () => clearInterval(interval);
 
         return () => console.log("Komponenta je odpojena");
     }, []);
