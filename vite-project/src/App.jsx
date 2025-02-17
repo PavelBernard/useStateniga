@@ -4,6 +4,7 @@ import appLogo from '/favicon.svg'
 import { Counter } from './components/Counter.jsx'
 import { ShowTime } from './components/ShowTime.jsx'
 import { FetchUsers } from './components/FetchUsers.jsx'
+import { AutoCounter } from './components/AutoCounter.jsx'
 import PWABadge from './PWABadge.jsx'
 import './App.css'
 
@@ -15,6 +16,7 @@ function App() {
      <Counter />
      <ShowTime />
      <FetchUsers />
+     <AutoCounter />
     </>
   )
 }
